@@ -1,88 +1,18 @@
 body {
-  background: red !important;
-}
-
-* {
-  padding: 35px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.status-box {
-  text-align: center;
-  padding: 80px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, rgba(139,108,255,0.16), rgba(63,140,255,0.08));
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.status-box p {
-  max-width: 800px;
-  margin: auto;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.8;
-  margin-bottom: 35px;
-}
-
-footer {
-  padding: 60px 8%;
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-footer h3 {
-  font-size: 34px;
-  margin-bottom: 10px;
-}
-
-footer p {
-  color: rgba(255,255,255,0.55);
-  margin-bottom: 20px;
-}
-
-.footer-links {
+  background: red;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.footer-links a {
-  color: white;
-  text-decoration: none;
-}
-
-@media(max-width:1000px) {
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 100px;
-  }
-
-  .hero h1 {
-    font-size: 58px;
-  }
-
-  .terminal-box {
-    width: 100%;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .features-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    display: none;
-  }
-
+.box {
+  background: white;
+  color: black;
+  padding: 40px;
+  border-radius: 20px;
+  font-size: 40px;
+  font-weight: bold;
 }
