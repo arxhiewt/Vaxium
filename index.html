@@ -40,7 +40,10 @@
 
   <div class="buttons">
     <button>Coming Soon</button>
-    <button class="secondary">Discord</button>
+
+    <a href="https://discord.gg/K5ub96RYyS" target="_blank">
+      <button class="secondary">Join Discord</button>
+    </a>
   </div>
 
 </section>
@@ -144,30 +147,44 @@
 
 </section>
 
-<!-- NEW SECTION -->
 <section id="skills">
 
   <h2>AI-Battler Skill Levels</h2>
 
   <p class="center">
-    These are current performance results based on internal testing and gameplay.
+    Performance is based on internal testing across different kits and environments.
   </p>
 
   <div class="mini-grid">
-    <div class="mini">Sword Kit • High Level</div>
+    <div class="mini">Sword Kit • High</div>
     <div class="mini">SMP Kit • Stable</div>
-    <div class="mini">Reaction Speed • Adaptive</div>
-    <div class="mini">PvP Awareness • Improving</div>
+    <div class="mini">Reaction • Adaptive</div>
+    <div class="mini">Awareness • Improving</div>
   </div>
 
   <h3 style="margin-top:40px;">Match Screenshots</h3>
 
-  <div class="screenshots">
+  <div class="ss-grid">
 
-    <img src="assets/win1.png" class="shot">
-    <img src="assets/win2.png" class="shot">
-    <img src="assets/win3.png" class="shot">
+    <div class="ss-pair">
+      <img src="assets/win1.png" onclick="openImg(this)">
+      <img src="assets/win2.png" onclick="openImg(this)">
+    </div>
 
+    <div class="ss-pair">
+      <img src="assets/win3.png" onclick="openImg(this)">
+      <img src="assets/win4.png" onclick="openImg(this)">
+    </div>
+
+    <div class="ss-pair">
+      <img src="assets/win5.png" onclick="openImg(this)">
+      <img src="assets/win6.png" onclick="openImg(this)">
+    </div>
+
+  </div>
+
+  <div id="viewer" onclick="closeImg()">
+    <img id="viewerImg">
   </div>
 
 </section>
@@ -183,7 +200,7 @@
     </p>
 
     <p>
-      Some servers and environments may behave differently during testing builds.
+      Some systems may behave differently depending on updates and test builds.
     </p>
 
     <button>Coming Soon</button>
@@ -196,6 +213,8 @@
   <h3>Vaxium Client</h3>
   <p>Minecraft PvP Client • Alpha Build</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
