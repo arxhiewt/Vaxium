@@ -1,20 +1,23 @@
-const buttons = document.querySelectorAll('button');
+const animated = document.querySelectorAll('.feature, .server-card, .ac-card, .stat-card');
 
-buttons.forEach(button => {
-    button.addEventListener('mouseenter', () => {
-        button.style.transform = 'translateY(-2px) scale(1.02)';
-    });
+animated.forEach(card => {
 
-    button.addEventListener('mouseleave', () => {
-        button.style.transform = 'translateY(0px) scale(1)';
-    });
+  card.addEventListener('mouseenter', () => {
+    card.style.transform = 'translateY(-6px)';
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0px)';
+  });
+
 });
 
 console.log(`
-====================================
-      VAXIUM CLIENT v1.1.0
-====================================
-Experimental AI-Battler Loaded
-Minecraft 1.19 - 1.21.11
-====================================
+=====================================
+        VAXIUM CLIENT
+=====================================
+Version: v1.1.0 ALPHA
+Minecraft: 1.19 → 1.21.11
+AI-Battler: ENABLED
+=====================================
 `);
