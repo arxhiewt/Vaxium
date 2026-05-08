@@ -5,201 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vaxium Client</title>
 
-  <link rel="stylesheet" href="./style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="bg"></div>
-<div class="grid"></div>
-
 <header>
-  <div class="logo">
-    <span>V</span>axium
-  </div>
+  <div class="logo">Vaxium</div>
 
   <nav>
     <a href="#features">Features</a>
-    <a href="#servers">Servers</a>
-    <a href="#bypass">Bypasses</a>
+    <a href="#ai">AI-Battler</a>
     <a href="#status">Status</a>
   </nav>
 
-  <button class="top-btn">v1.1.0 ALPHA</button>
+  <div class="tag">v1.1.0 ALPHA</div>
 </header>
 
 <section class="hero">
 
-  <div class="hero-left">
+  <h1>
+    A simple Minecraft PvP client<br/>
+    <span>still in development</span>
+  </h1>
 
-    <div class="tag">
-      AI POWERED MINECRAFT CLIENT
-    </div>
+  <p>
+    Vaxium Client is an early-stage Minecraft PvP client focused on movement tools, combat assistance,
+    and experimental AI systems. It is still actively being developed and improved.
+  </p>
 
-    <h1>
-      Vaxium
-      <span>Client</span>
-    </h1>
-
-    <p>
-      Experimental next-generation Minecraft combat client featuring our advanced AI-Battler technology with Sword & SMP kit support.
-      Built for Minecraft 1.19 → 1.21.11.
-    </p>
-
-    <div class="buttons">
-      <button class="primary">COMING SOON</button>
-      <button class="secondary">JOIN DISCORD</button>
-    </div>
-
-    <div class="small-text">
-      Undetected on almost every server.
-    </div>
-
-  </div>
-
-  <div class="hero-right">
-
-    <div class="terminal">
-
-      <div class="terminal-top">
-        <div class="circle red"></div>
-        <div class="circle yellow"></div>
-        <div class="circle green"></div>
-      </div>
-
-      <div class="terminal-content">
-        <p>> Initializing AI-Battler...</p>
-        <p>> Learning movement patterns...</p>
-        <p>> Optimizing combat timings...</p>
-        <p>> Injecting bypass modules...</p>
-        <p class="green-text">> AI-Battler Online.</p>
-      </div>
-
-    </div>
-
+  <div class="buttons">
+    <button>Coming Soon</button>
+    <button class="secondary">Join Discord</button>
   </div>
 
 </section>
 
-<section class="stats">
+<section class="grid">
 
-  <div class="stat">
-    <h2>1.19 → 1.21.11</h2>
-    <p>Version Support</p>
+  <div class="card">
+    <h2>Supported Version</h2>
+    <p>Minecraft 1.19 → 1.21.11</p>
   </div>
 
-  <div class="stat">
-    <h2>AI-Battler</h2>
-    <p>Sword & SMP Support</p>
+  <div class="card">
+    <h2>Project Stage</h2>
+    <p>Early Alpha Development</p>
   </div>
 
-  <div class="stat">
-    <h2>Undetected</h2>
-    <p>Advanced Bypasses</p>
+  <div class="card">
+    <h2>Focus</h2>
+    <p>Combat + Movement + AI Assistance</p>
   </div>
 
 </section>
 
-<section class="features" id="features">
+<section id="features">
 
   <h2>Features</h2>
 
-  <div class="feature-grid">
+  <div class="split">
 
-    <div class="feature-box">
-
+    <div class="box">
       <h3>Finished</h3>
 
-      <div class="feature done">
-        Jumpreset
-      </div>
+      <div>Jump Reset</div>
 
-      <div class="feature done">
+      <div>
         AI-Battler
-        <small>Sword & SMP Kit Support</small>
+        <small>Supports Sword & SMP kits</small>
       </div>
 
     </div>
 
-    <div class="feature-box">
+    <div class="box">
+      <h3>In Development</h3>
 
-      <h3>Under Development</h3>
-
-      <div class="feature">Triggerbot</div>
-      <div class="feature">Aim Assist</div>
-      <div class="feature">Shield Disable</div>
-      <div class="feature">Stun Slam</div>
-      <div class="feature">Breach/Density AutoSwap</div>
-      <div class="feature">Auto Anchor</div>
-      <div class="feature">Auto Web</div>
-
+      <div>Triggerbot</div>
+      <div>Aim Assist</div>
+      <div>Shield Assist</div>
+      <div>Movement Tools</div>
+      <div>Auto Utilities</div>
     </div>
 
   </div>
 
 </section>
 
-<section class="servers" id="servers">
+<section id="ai">
 
-  <h2>AI-Battler Compatible Servers</h2>
+  <h2>AI-Battler</h2>
 
-  <div class="server-grid">
-    <div class="server">Minemen</div>
-    <div class="server">MCPVP</div>
-    <div class="server">CatPVP</div>
-    <div class="server">FlowPVP</div>
+  <p class="center">
+    The AI-Battler is an experimental system designed to assist in combat by reacting to opponents and
+    automatically playing in supported kits.
+  </p>
+
+  <div class="mini-grid">
+    <div class="mini">Sword Kit</div>
+    <div class="mini">SMP Kit</div>
+    <div class="mini">More coming soon</div>
   </div>
 
 </section>
 
-<section class="bypass" id="bypass">
-
-  <h2>Anti-Cheat Compatibility</h2>
-
-  <div class="bypass-grid">
-    <div class="bypass-card">Vulcan</div>
-    <div class="bypass-card">NoCheat+</div>
-    <div class="bypass-card">AAC</div>
-    <div class="bypass-card">GrimAC</div>
-    <div class="bypass-card">Verus</div>
-    <div class="bypass-card">Spartan</div>
-    <div class="bypass-card">Vanilla Servers</div>
-  </div>
-
-</section>
-
-<section class="status" id="status">
+<section id="status">
 
   <div class="status-box">
 
-    <h2>Release Status</h2>
+    <h2>Development Status</h2>
 
     <p>
-      Vaxium Client is currently under active development with new combat systems and bypass technologies continuously being improved before public release.
+      Vaxium is still in active development. Many systems are unfinished, and features are being tested and improved regularly.
     </p>
 
-    <button class="primary">
-      RELEASE COMING SOON
-    </button>
+    <p>
+      Some servers and environments may behave differently during testing.
+    </p>
+
+    <button>Project Updates Soon</button>
 
   </div>
 
 </section>
 
 <footer>
-
   <h3>Vaxium Client</h3>
-
-  <p>
-    Experimental Minecraft Combat Technology
-  </p>
-
+  <p>Simple, experimental Minecraft PvP development project</p>
 </footer>
 
-<script src="./script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
