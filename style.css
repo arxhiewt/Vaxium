@@ -1,79 +1,84 @@
 * {
-    background: linear-gradient(135deg, rgba(124,92,255,0.15), rgba(76,127,255,0.08));
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 30px;
-    padding: 80px 40px;
+  padding: 35px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  transition: 0.3s;
 }
 
-.release-box h2 {
-    font-size: 52px;
-    margin-bottom: 20px;
+.status-box {
+  text-align: center;
+  padding: 80px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(139,108,255,0.16), rgba(63,140,255,0.08));
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-.release-box p {
-    max-width: 700px;
-    margin: auto;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.8;
-    margin-bottom: 35px;
+.status-box p {
+  max-width: 800px;
+  margin: auto;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 35px;
 }
 
 footer {
-    padding: 50px 8%;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    text-align: center;
+  padding: 60px 8%;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 footer h3 {
-    font-size: 30px;
-    margin-bottom: 10px;
+  font-size: 34px;
+  margin-bottom: 10px;
 }
 
 footer p {
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 20px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 20px;
 }
 
 .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
 }
 
 .footer-links a {
-    text-decoration: none;
-    color: white;
+  color: white;
+  text-decoration: none;
 }
 
-@media (max-width: 1000px) {
+@media(max-width:1000px) {
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+  }
 
-    .hero-card {
-        width: 100%;
-    }
+  .hero h1 {
+    font-size: 58px;
+  }
 
-    .hero-buttons {
-        justify-content: center;
-    }
+  .terminal-box {
+    width: 100%;
+  }
 
-    .stats {
-        grid-template-columns: 1fr;
-    }
+  .buttons {
+    justify-content: center;
+  }
 
-    nav {
-        display: none;
-    }
+  .stats {
+    grid-template-columns: 1fr;
+  }
 
-    .hero h1 {
-        font-size: 48px;
-    }
+  .features-wrapper {
+    grid-template-columns: 1fr;
+  }
 
-    .features h2,
-    .release-box h2 {
-        font-size: 38px;
-    }
+  nav {
+    display: none;
+  }
+
 }
