@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 <header>
 
   <div class="logo">
-    Vaxium<span>.</span>
+    Vaxium
   </div>
 
   <nav>
@@ -29,7 +29,7 @@
     <a href="#anticheat">Anti-Cheat</a>
   </nav>
 
-  <a href="https://discord.gg/K5ub96RYyS" target="_blank" class="discord-btn">
+  <a href="https://discord.gg/K5ub96RYyS" target="_blank" class="discord-link">
     <button>Join Discord</button>
   </a>
 
@@ -37,73 +37,34 @@
 
 <section class="hero" id="home">
 
-  <div class="hero-content">
+  <div class="hero-text">
 
-    <div class="hero-left">
-
-      <div class="status-pill">
-        ALPHA DEVELOPMENT
-      </div>
-
-      <h1>
-        Vaxium <span>Client</span>
-      </h1>
-
-      <p>
-        Vaxium has been under development since February 2025 and is still actively being worked on.
-        The project will become open-source in the future, excluding AI-Battler.
-        <br><br>
-        AI-Battler and JumpReset are currently being alpha tested while the remaining systems continue development.
-      </p>
-
-      <div class="hero-tags">
-        <div>Undetected</div>
-        <div>Fast</div>
-        <div>Smooth</div>
-        <div>Alpha Build</div>
-      </div>
-
-      <div class="hero-buttons">
-
-        <button class="main-btn">
-          In Development
-        </button>
-
-        <a href="https://discord.gg/K5ub96RYyS" target="_blank">
-          <button class="second-btn">
-            Discord Community
-          </button>
-        </a>
-
-      </div>
-
+    <div class="alpha-tag">
+      ALPHA DEVELOPMENT
     </div>
 
-    <div class="hero-right">
+    <h1>
+      Vaxium Client
+    </h1>
 
-      <div class="client-window">
+    <p>
+      Vaxium has been in development since February 2025 and is still actively being worked on.
+      The project will eventually become open-source, excluding AI-Battler.
+      <br><br>
+      AI-Battler and JumpReset are currently being alpha tested while the remaining systems continue development.
+    </p>
 
-        <div class="window-top">
+    <div class="hero-buttons">
 
-          <div class="dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+      <button class="primary-btn">
+        In Development
+      </button>
 
-          <div class="window-title">
-            Vaxium Client
-          </div>
-
-          <div class="stats">
-            620 FPS • 18 MS
-          </div>
-
-        </div>
-
-        <img src="assets/client.png" alt="Vaxium Screenshot">
-
-      </div>
+      <a href="https://discord.gg/K5ub96RYyS" target="_blank">
+        <button class="secondary-btn">
+          Discord Community
+        </button>
+      </a>
 
     </div>
 
@@ -111,26 +72,56 @@
 
 </section>
 
+<!-- SCREENSHOT -->
+
+<section class="screenshot-section">
+
+  <div class="screenshot-box">
+
+    <div class="window-bar">
+
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="window-title">
+        Vaxium Client
+      </div>
+
+    </div>
+
+    <img src="assets/client.png" alt="Vaxium Screenshot">
+
+  </div>
+
+</section>
+
+<!-- VERSIONS -->
+
 <section class="section" id="versions">
 
-  <div class="section-title">
+  <div class="section-top">
+
     <h2>Versions</h2>
 
     <p>
-      Vaxium currently supports Minecraft versions 1.19 through 1.21.11 with more support planned in future updates.
+      Vaxium currently supports Minecraft versions 1.19 through 1.21.11 with more compatibility planned in future updates.
     </p>
+
   </div>
 
-  <div class="info-grid">
+  <div class="card-grid">
 
     <div class="card">
       <h3>Supported Versions</h3>
-      <p>Minecraft 1.19 → 1.21.11</p>
+      <p>1.19 → 1.21.11</p>
     </div>
 
     <div class="card">
-      <h3>Current Status</h3>
-      <p>Internal Alpha Development</p>
+      <h3>Development Status</h3>
+      <p>Internal Alpha Testing</p>
     </div>
 
     <div class="card">
@@ -142,14 +133,18 @@
 
 </section>
 
+<!-- FEATURES -->
+
 <section class="section" id="features">
 
-  <div class="section-title">
+  <div class="section-top">
+
     <h2>Features</h2>
 
     <p>
-      Most modules are still undergoing development while AI-Battler and JumpReset continue internal alpha testing.
+      Most modules are still undergoing development while AI-Battler and JumpReset continue alpha testing.
     </p>
+
   </div>
 
   <div class="feature-grid">
@@ -168,23 +163,29 @@
 
 </section>
 
+<!-- ANTICHEAT -->
+
 <section class="section" id="anticheat">
 
-  <div class="section-title">
+  <div class="section-top">
+
     <h2>Anti-Cheat</h2>
 
     <p>
-      Vaxium is continuously tested across multiple anti-cheats and Minecraft PvP servers.
+      Vaxium is continuously tested across multiple anti-cheat systems and Minecraft PvP servers.
     </p>
+
   </div>
 
   <div class="anti-grid">
 
-    <div class="anti-box good-box">
+    <div class="anti-box">
 
-      <h3>Currently Undetected</h3>
+      <h3 class="green">
+        Currently Undetected
+      </h3>
 
-      <div class="anti-list">
+      <div class="list">
 
         <div>NoCheat+</div>
         <div>AAC</div>
@@ -195,11 +196,13 @@
 
     </div>
 
-    <div class="anti-box bad-box">
+    <div class="anti-box">
 
-      <h3>Currently Detected By</h3>
+      <h3 class="red">
+        Currently Detected By
+      </h3>
 
-      <div class="anti-list">
+      <div class="list">
 
         <div>Vulcan</div>
         <div>GrimAC</div>
@@ -213,7 +216,9 @@
 
   <div class="servers">
 
-    <h3>Servers Tested</h3>
+    <h3>
+      Servers Tested
+    </h3>
 
     <div class="server-grid">
 
