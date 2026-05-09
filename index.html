@@ -1,548 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Vaxium Client</title>
+
+  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:#070b14;
-  color:white;
-  overflow-x:hidden;
-}
-
-/* BACKGROUND */
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at top left,#16357d22,transparent 35%),
-    radial-gradient(circle at bottom right,#2952ff18,transparent 35%),
-    linear-gradient(to bottom,#070b14,#0a1020);
-  z-index:-2;
-}
-
-body::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);
-  background-size:40px 40px;
-  z-index:-1;
-}
-
-/* HEADER */
-
-header{
-  width:100%;
-  position:sticky;
-  top:0;
-  z-index:1000;
-
-  backdrop-filter:blur(14px);
-
-  background:rgba(8,11,20,0.72);
-
-  border-bottom:1px solid rgba(255,255,255,0.06);
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:20px 7%;
-}
-
-.logo{
-  font-size:30px;
-  font-weight:800;
-  letter-spacing:-1px;
-}
-
-.logo span{
-  color:#4d7cff;
-}
-
-nav{
-  display:flex;
-  gap:40px;
-}
-
-nav a{
-  color:#9ea7c5;
-  text-decoration:none;
-  font-weight:500;
-  transition:0.25s;
-}
-
-nav a:hover{
-  color:white;
-}
-
-.discord-btn{
-  text-decoration:none;
-}
-
-.discord-btn button{
-  border:none;
-  background:#355cff;
-  color:white;
-  padding:12px 18px;
-  border-radius:12px;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.25s;
-}
-
-.discord-btn button:hover{
-  transform:translateY(-2px);
-  background:#4d73ff;
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:120px 7% 80px;
-}
-
-.hero-wrap{
-  display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:60px;
-  align-items:center;
-  width:100%;
-  max-width:1450px;
-}
-
-.hero-left h1{
-  font-size:78px;
-  line-height:0.95;
-  font-weight:900;
-  letter-spacing:-3px;
-  margin-bottom:28px;
-}
-
-.hero-left h1 span{
-  color:#5d82ff;
-}
-
-.hero-sub{
-  color:#b7bfd7;
-  line-height:1.8;
-  font-size:18px;
-  max-width:700px;
-}
-
-.hero-sub strong{
-  color:white;
-}
-
-.hero-tags{
-  margin-top:34px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
-
-.hero-tag{
-  padding:14px 18px;
-  background:#11192c;
-  border:1px solid rgba(255,255,255,0.07);
-  border-radius:14px;
-  color:#c5cee7;
-  font-size:14px;
-}
-
-.hero-buttons{
-  margin-top:34px;
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.primary{
-  border:none;
-  background:#4670ff;
-  color:white;
-  padding:16px 22px;
-  border-radius:14px;
-  font-weight:700;
-  cursor:pointer;
-  transition:0.25s;
-}
-
-.primary:hover{
-  transform:translateY(-2px);
-}
-
-.secondary{
-  border:1px solid rgba(255,255,255,0.1);
-  background:#12192c;
-  color:white;
-  padding:16px 22px;
-  border-radius:14px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-/* CLIENT IMAGE */
-
-.client-preview{
-  position:relative;
-}
-
-.client-frame{
-  width:100%;
-  border-radius:22px;
-  overflow:hidden;
-
-  background:#101827;
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  box-shadow:
-  0 0 80px rgba(52,90,255,0.18),
-  0 30px 60px rgba(0,0,0,0.5);
-}
-
-.client-top{
-  height:52px;
-  background:#0e1524;
-  border-bottom:1px solid rgba(255,255,255,0.05);
-
-  display:flex;
-  align-items:center;
-  padding:0 20px;
-  gap:10px;
-}
-
-.dot{
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  background:#2c3e66;
-}
-
-.client-image{
-  width:100%;
-  height:600px;
-  object-fit:cover;
-  display:block;
-}
-
-/* SECTION */
-
-.section{
-  padding:140px 7%;
-}
-
-.section-header{
-  margin-bottom:50px;
-}
-
-.section-header h2{
-  font-size:54px;
-  font-weight:800;
-  margin-bottom:14px;
-  letter-spacing:-2px;
-}
-
-.section-header p{
-  color:#9ea7c5;
-  max-width:800px;
-  line-height:1.8;
-}
-
-/* CARDS */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-}
-
-.card{
-  background:#0f1728;
-
-  border:1px solid rgba(255,255,255,0.06);
-
-  border-radius:22px;
-
-  padding:34px;
-
-  transition:0.25s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  border-color:#456dff66;
-}
-
-.card h3{
-  font-size:22px;
-  margin-bottom:16px;
-}
-
-.card p{
-  color:#b4bdd8;
-  line-height:1.8;
-}
-
-/* FEATURES */
-
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.feature{
-  background:#10192d;
-  border:1px solid rgba(255,255,255,0.06);
-  padding:22px;
-  border-radius:18px;
-
-  transition:0.25s;
-}
-
-.feature:hover{
-  transform:translateY(-5px);
-  border-color:#4f77ff55;
-}
-
-.feature h4{
-  font-size:18px;
-  margin-bottom:8px;
-}
-
-.feature p{
-  color:#96a0bd;
-  font-size:14px;
-  line-height:1.6;
-}
-
-/* ANTICHEAT */
-
-.ac-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
-
-.ac-box{
-  background:#10192d;
-  border-radius:24px;
-  padding:34px;
-  border:1px solid rgba(255,255,255,0.06);
-}
-
-.ac-box h3{
-  font-size:28px;
-  margin-bottom:24px;
-}
-
-.good{
-  color:#6bff95;
-}
-
-.bad{
-  color:#ff7777;
-}
-
-.list{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-.list div{
-  background:#151f36;
-  border-radius:14px;
-  padding:16px 18px;
-  color:#d7dff7;
-}
-
-/* SERVERS */
-
-.server-wrap{
-  margin-top:50px;
-}
-
-.server-wrap h3{
-  font-size:28px;
-  margin-bottom:20px;
-}
-
-.servers{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.server{
-  background:#10192d;
-  border:1px solid rgba(255,255,255,0.06);
-  border-radius:18px;
-  padding:22px;
-  transition:0.25s;
-}
-
-.server:hover{
-  transform:translateY(-4px);
-  border-color:#547bff55;
-}
-
-.server small{
-  display:block;
-  margin-top:8px;
-  color:#8692b1;
-}
-
-/* END */
-
-.end{
-  text-align:center;
-  padding:140px 7%;
-}
-
-.end h2{
-  font-size:64px;
-  margin-bottom:20px;
-  letter-spacing:-2px;
-}
-
-.end p{
-  max-width:800px;
-  margin:auto;
-  color:#a7b0cb;
-  line-height:1.8;
-  font-size:18px;
-}
-
-.end-tags{
-  margin-top:40px;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:14px;
-}
-
-.end-tags div{
-  background:#10192d;
-  border:1px solid rgba(255,255,255,0.06);
-  border-radius:14px;
-  padding:14px 18px;
-  color:#d4dcf5;
-}
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid rgba(255,255,255,0.06);
-  text-align:center;
-  padding:40px;
-  color:#7f8aad;
-}
-
-/* MOBILE */
-
-@media(max-width:1100px){
-
-  .hero-wrap{
-    grid-template-columns:1fr;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .feature-grid{
-    grid-template-columns:1fr;
-  }
-
-  .servers{
-    grid-template-columns:1fr;
-  }
-
-  .ac-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero-left h1{
-    font-size:58px;
-  }
-
-}
-
-@media(max-width:850px){
-
-  nav{
-    display:none;
-  }
-
-  header{
-    padding:18px 5%;
-  }
-
-  .hero{
-    padding:120px 5% 80px;
-  }
-
-  .section{
-    padding:100px 5%;
-  }
-
-  .end{
-    padding:100px 5%;
-  }
-
-  .hero-left h1{
-    font-size:44px;
-  }
-
-  .section-header h2{
-    font-size:38px;
-  }
-
-  .end h2{
-    font-size:42px;
-  }
-
-  .client-image{
-    height:360px;
-  }
-
-}
-
-  </style>
 </head>
 
 <body>
@@ -560,60 +29,79 @@ footer{
     <a href="#anticheat">Anti-Cheat</a>
   </nav>
 
-  <a class="discord-btn" href="https://discord.gg/K5ub96RYyS" target="_blank">
+  <a href="https://discord.gg/K5ub96RYyS" target="_blank" class="discord-btn">
     <button>Join Discord</button>
   </a>
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="home">
 
-  <div class="hero-wrap">
+  <div class="hero-content">
 
     <div class="hero-left">
+
+      <div class="status-pill">
+        ALPHA DEVELOPMENT
+      </div>
 
       <h1>
         Vaxium <span>Client</span>
       </h1>
 
-      <p class="hero-sub">
-        Vaxium has been under development since <strong>February 2025</strong> and is still actively being worked on.
-        The project will be fully open-source in the future, excluding the AI-Battler systems.
+      <p>
+        Vaxium has been under development since February 2025 and is still actively being worked on.
+        The project will become open-source in the future, excluding AI-Battler.
         <br><br>
-        Most modules are currently in active development while AI-Battler and JumpReset are being alpha tested.
+        AI-Battler and JumpReset are currently being alpha tested while the remaining systems continue development.
       </p>
 
       <div class="hero-tags">
-        <div class="hero-tag">Undetected</div>
-        <div class="hero-tag">Fast</div>
-        <div class="hero-tag">Smooth</div>
-        <div class="hero-tag">Alpha Build</div>
+        <div>Undetected</div>
+        <div>Fast</div>
+        <div>Smooth</div>
+        <div>Alpha Build</div>
       </div>
 
       <div class="hero-buttons">
-        <button class="primary">In Development</button>
+
+        <button class="main-btn">
+          In Development
+        </button>
 
         <a href="https://discord.gg/K5ub96RYyS" target="_blank">
-          <button class="secondary">Discord Community</button>
+          <button class="second-btn">
+            Discord Community
+          </button>
         </a>
+
       </div>
 
     </div>
 
-    <div class="client-preview">
+    <div class="hero-right">
 
-      <div class="client-frame">
+      <div class="client-window">
 
-        <div class="client-top">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+        <div class="window-top">
+
+          <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="window-title">
+            Vaxium Client
+          </div>
+
+          <div class="stats">
+            620 FPS • 18 MS
+          </div>
+
         </div>
 
-        <!-- PUT YOUR SCREENSHOT HERE -->
-        <img src="assets/client.png" class="client-image">
+        <img src="assets/client.png" alt="Vaxium Screenshot">
 
       </div>
 
@@ -623,188 +111,118 @@ footer{
 
 </section>
 
-<!-- VERSIONS -->
-
 <section class="section" id="versions">
 
-  <div class="section-header">
+  <div class="section-title">
     <h2>Versions</h2>
 
     <p>
-      Vaxium currently supports Minecraft versions from 1.19 up to 1.21.11 with more compatibility hopefully coming soon.
+      Vaxium currently supports Minecraft versions 1.19 through 1.21.11 with more support planned in future updates.
     </p>
   </div>
 
-  <div class="grid">
+  <div class="info-grid">
 
     <div class="card">
-      <h3>Supported</h3>
-      <p>
-        Minecraft 1.19 → 1.21.11
-      </p>
+      <h3>Supported Versions</h3>
+      <p>Minecraft 1.19 → 1.21.11</p>
     </div>
 
     <div class="card">
-      <h3>Status</h3>
-      <p>
-        Active alpha development with regular improvements and internal testing.
-      </p>
+      <h3>Current Status</h3>
+      <p>Internal Alpha Development</p>
     </div>
 
     <div class="card">
       <h3>Goal</h3>
-      <p>
-        We aim to change the future of Minecraft PvP through advanced movement and combat systems.
-      </p>
+      <p>Changing the future of Minecraft PvP.</p>
     </div>
 
   </div>
 
 </section>
 
-<!-- FEATURES -->
-
 <section class="section" id="features">
 
-  <div class="section-header">
-
+  <div class="section-title">
     <h2>Features</h2>
 
     <p>
-      Most systems are still undergoing development while AI-Battler and JumpReset are currently being alpha tested.
+      Most modules are still undergoing development while AI-Battler and JumpReset continue internal alpha testing.
     </p>
-
   </div>
 
   <div class="feature-grid">
 
-    <div class="feature">
-      <h4>AI-Battler</h4>
-      <p>Experimental automated combat and adaptive gameplay systems.</p>
-    </div>
-
-    <div class="feature">
-      <h4>JumpReset</h4>
-      <p>Advanced movement timing and combat reset mechanics.</p>
-    </div>
-
-    <div class="feature">
-      <h4>Triggerbot</h4>
-      <p>Automatic hit registration currently under development.</p>
-    </div>
-
-    <div class="feature">
-      <h4>Aim Assist</h4>
-      <p>Smooth rotational combat assistance systems.</p>
-    </div>
-
-    <div class="feature">
-      <h4>Shield Disabler</h4>
-      <p>Shield counter systems for modern PvP combat.</p>
-    </div>
-
-    <div class="feature">
-      <h4>Stun Slam</h4>
-      <p>Experimental combat utility module in development.</p>
-    </div>
-
-    <div class="feature">
-      <h4>Breach Density AutoSwap</h4>
-      <p>Automatic combat utility swapping support.</p>
-    </div>
-
-    <div class="feature">
-      <h4>Auto Anchor</h4>
-      <p>Anchor combat automation and placement systems.</p>
-    </div>
-
-    <div class="feature">
-      <h4>Auto Web</h4>
-      <p>Fast automated cobweb placement systems.</p>
-    </div>
+    <div class="feature">AI-Battler</div>
+    <div class="feature">JumpReset</div>
+    <div class="feature">Triggerbot</div>
+    <div class="feature">Aim Assist</div>
+    <div class="feature">Shield Disabler</div>
+    <div class="feature">Stun Slam</div>
+    <div class="feature">Breach Density AutoSwap</div>
+    <div class="feature">Auto Anchor</div>
+    <div class="feature">Auto Web</div>
 
   </div>
 
 </section>
 
-<!-- ANTICHEAT -->
-
 <section class="section" id="anticheat">
 
-  <div class="section-header">
-
+  <div class="section-title">
     <h2>Anti-Cheat</h2>
 
     <p>
-      Vaxium is continuously tested across multiple anti-cheat systems and PvP servers to improve performance and consistency.
+      Vaxium is continuously tested across multiple anti-cheats and Minecraft PvP servers.
     </p>
-
   </div>
 
-  <div class="ac-grid">
+  <div class="anti-grid">
 
-    <div class="ac-box">
+    <div class="anti-box good-box">
 
-      <h3 class="good">Currently Undetected</h3>
+      <h3>Currently Undetected</h3>
 
-      <div class="list">
+      <div class="anti-list">
+
         <div>NoCheat+</div>
         <div>AAC</div>
         <div>Spartan</div>
         <div>Vanilla Servers</div>
+
       </div>
 
     </div>
 
-    <div class="ac-box">
+    <div class="anti-box bad-box">
 
-      <h3 class="bad">Currently Detected By</h3>
+      <h3>Currently Detected By</h3>
 
-      <div class="list">
+      <div class="anti-list">
+
         <div>Vulcan</div>
         <div>GrimAC</div>
         <div>Verus</div>
+
       </div>
 
     </div>
 
   </div>
 
-  <div class="server-wrap">
+  <div class="servers">
 
     <h3>Servers Tested</h3>
 
-    <div class="servers">
+    <div class="server-grid">
 
-      <div class="server">
-        mcpvp.club
-        <small>Smooth Performance</small>
-      </div>
-
-      <div class="server">
-        catpvp.xyz
-        <small>Stable Combat Testing</small>
-      </div>
-
-      <div class="server">
-        stray.gg
-        <small>Movement Testing</small>
-      </div>
-
-      <div class="server">
-        flowpvp.gg
-        <small>Combat Simulations</small>
-      </div>
-
-      <div class="server">
-        play.pvphub.me
-        <small>General PvP Testing</small>
-      </div>
-
-      <div class="server">
-        play.cubecraft.net
-        <small>Compatibility Testing</small>
-      </div>
+      <div class="server">mcpvp.club</div>
+      <div class="server">catpvp.xyz</div>
+      <div class="server">stray.gg</div>
+      <div class="server">flowpvp.gg</div>
+      <div class="server">play.pvphub.me</div>
+      <div class="server">play.cubecraft.net</div>
 
     </div>
 
@@ -812,30 +230,23 @@ footer{
 
 </section>
 
-<!-- END -->
-
-<section class="end">
+<section class="bottom">
 
   <h2>
     Undetected. Fast. Smooth.
   </h2>
 
   <p>
-    Vaxium is still in active development and continues to evolve with new systems, combat mechanics, and AI improvements.
+    Vaxium is still evolving with new combat systems, movement mechanics, and AI technologies.
   </p>
-
-  <div class="end-tags">
-    <div>Open Source Planned</div>
-    <div>AI-Battler Alpha</div>
-    <div>Modern PvP Systems</div>
-    <div>2025 → Present</div>
-  </div>
 
 </section>
 
 <footer>
   Vaxium Client • Alpha Build
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
